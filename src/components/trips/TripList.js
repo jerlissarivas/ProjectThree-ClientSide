@@ -64,7 +64,7 @@ class TripList extends Component {
       <div>
         <AddTrip updateState={this.newTripAdded} />
         <hr />
-        {this.showTrips()}
+        {this.state.tripList && this.showTrips()}
       </div>
     );
   }
