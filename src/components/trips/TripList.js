@@ -20,7 +20,7 @@ class TripList extends Component {
   // after we delete the trip from the db we will need to then call the function which gets all the trips from the db in order to update the list with the deleted trip missing.
   deleteTrip = (tripId) => {
     axios
-      .delete(`http://localhost:3001/trips/${tripId}/delete`)
+      .post(`http://localhost:3001/trips/${tripId}/delete`)
       .then((messageAfterDeletingTrip) => {
         console.log({ messageAfterDeletingTrip });
         this.getTripList();
