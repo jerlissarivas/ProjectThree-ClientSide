@@ -19,7 +19,13 @@ class AddTrip extends Component {
         console.log({ newlyCreatedTripFromAPI });
 
         this.props.updateState();
-        this.setState({ title: "", description: "", complete: false });
+        this.setState({
+          tripName: "",
+          tripType: "",
+          location: "",
+          dates: "",
+          travelType: "",
+        });
       })
       .catch((err) => console.log({ err }));
   };
