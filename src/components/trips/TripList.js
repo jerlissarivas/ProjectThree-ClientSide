@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import AddTrip from "./AddTrip";
+import { Route, Switch, Link } from "react-router-dom";
 
 class TripList extends Component {
   state = {
@@ -45,13 +46,15 @@ class TripList extends Component {
       this.state.tripList.map((trip, i) => {
         return (
           <div key={i}>
-            <h2>Trip Name: {trip.tripName}</h2>
+            <h2>
+              <Link to={`/tripdetails/${trip._id}`}>{trip.tripName}</Link>
+            </h2>
+            {/* <h2>{trip.tripName}</h2> */}
             <h3>Type: {trip.tripType}</h3>
             <h4>Location: {trip.location}</h4>
             <h4>Dates: {trip.dates}</h4>
             <h4>Travel Type: {trip.travelType}</h4>
 
-            {/* <h4>Location: {trip.complete ? "Yes" : "No"}</h4> */}
             <button onClick={() => this.deleteTrip(trip._id)}>Delete</button>
           </div>
         );
@@ -62,7 +65,7 @@ class TripList extends Component {
   render() {
     return (
       <div>
-        <AddTrip updateState={this.newTripAdded} />
+        {/* <AddTrip updateState={this.newTripAdded} /> */}
         <hr />
         {this.state.tripList && this.showTrips()}
       </div>
