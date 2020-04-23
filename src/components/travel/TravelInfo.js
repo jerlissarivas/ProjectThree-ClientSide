@@ -48,7 +48,6 @@ class TravelInfo extends Component {
             <h2>Airline: {travel.airline}</h2>
             <h3>Flight Number: {travel.flightNumber}</h3>
 
-            {/* <h4>Location: {trip.complete ? "Yes" : "No"}</h4> */}
             <button onClick={() => this.deleteTravel(travel._id)}>
               Delete
             </button>
