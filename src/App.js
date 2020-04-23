@@ -4,6 +4,7 @@ import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./components/Home";
 import TripList from "./components/trips/TripList";
+// import TripsCard from "./components/trips/TripsCard";
 import TripDetails from "./components/trips/TripDetails";
 
 function App() {
