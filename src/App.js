@@ -6,12 +6,14 @@ import Home from "./components/Home";
 import TripList from "./components/trips/TripList";
 // import TripsCard from "./components/trips/TripsCard";
 import TripDetails from "./components/trips/TripDetails";
+import Signup from "./components/Authentication/Signup";
 
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path='/signup' component={Signup} />
         <Route exact path="/trips" component={TripList} />
         <Route path="/tripdetails/:tripId" component={TripDetails} />
       </Switch>
