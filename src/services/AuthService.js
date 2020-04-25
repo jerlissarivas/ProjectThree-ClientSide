@@ -7,6 +7,8 @@ const service = axios.create({
   withCredentials: true,
 });
 
+console.log("THIS URL IS:", baseURL);
+
 const AUTH_SERVICE = {
   // userData is a placeholder (represents the user's inputs in the signup and login form)
   signup(userData) {
