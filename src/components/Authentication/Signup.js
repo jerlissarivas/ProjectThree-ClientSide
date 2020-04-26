@@ -17,7 +17,7 @@ function Signup() {
         return (
           <>
             {isLoggedIn ? (
-              <Redirect to="/" />
+              <Redirect to="/home" />
             ) : (
               <>
                 <h2>Signup form</h2>
