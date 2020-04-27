@@ -92,6 +92,58 @@ class AuthProvider extends React.Component {
       });
   };
 
+  handleLoginInput = (e) => {
+    console.log("anything", { e });
+    const {
+      target: { name, value },
+    } = e;
+
+    console.log({ name, value });
+    this.setState((prevState) => ({
+      ...prevState,
+      formLogin: {
+        ...prevState.formLogin,
+        [name]: value,
+      },
+    }));
+  };
+
+  handleLoginSubmit = (e) => {
+    e.preventDefault();
+    // console.log(this.state.formLogin);
+
+    // AUTH_SERVICE.signup({ email, password })
+    // the same as above        ^^^^^^
+    AUTH_SERVICE.login(this.state.formLogin)
+      .then((responseFromServer) => {
+        // console.log('res from server: ', responseFromServer);
+        const {
+          data: { user, message },
+        } = responseFromServer;
+
+        this.setState((prevState) => ({
+          ...prevState,
+          formSignup: {
+            email: "",
+            password: "",
+          },
+          currentUser: user,
+          isLoggedIn: true,
+        }));
+        alert(`${message}`);
+        this.props.history.push("/home");
+      })
+      .catch((err) => {
+        // console.log(err.response);
+        if (err.response && err.response.data) {
+          this.setState((prevState) => ({
+            ...prevState,
+            message: err.response.data.message,
+          }));
+        }
+      });
+  };
+
   handleLogout = () => {
     AUTH_SERVICE.logout()
       .then(() => {
@@ -106,7 +158,14 @@ class AuthProvider extends React.Component {
   };
 
   render() {
-    const { state, handleSignupInput, handleSignupSubmit, handleLogout } = this;
+    const {
+      state,
+      handleSignupInput,
+      handleSignupSubmit,
+      handleLogout,
+      handleLoginInput,
+      handleLoginSubmit,
+    } = this;
     return (
       <>
         <AuthContext.Provider
@@ -114,6 +173,8 @@ class AuthProvider extends React.Component {
             state,
             handleSignupInput,
             handleSignupSubmit,
+            handleLoginInput,
+            handleLoginSubmit,
             handleLogout,
           }}
         >
