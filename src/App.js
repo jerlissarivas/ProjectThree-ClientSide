@@ -4,16 +4,21 @@ import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./components/Home";
 import TripList from "./components/trips/TripList";
-// import TripsCard from "./components/trips/TripsCard";
+import ButtonAppBar from "./components/Navbar/ButtonAppBar";
 import TripDetails from "./components/trips/TripDetails";
 import Signup from "./components/Authentication/Signup";
+import LandingPage from "./components/LandingPage";
+import Login from "./components/Authentication/Login";
 
 function App() {
   return (
     <div className="App">
+      <ButtonAppBar />
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path='/signup' component={Signup} />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/trips" component={TripList} />
         <Route path="/tripdetails/:tripId" component={TripDetails} />
       </Switch>
