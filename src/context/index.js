@@ -123,7 +123,7 @@ class AuthProvider extends React.Component {
 
         this.setState((prevState) => ({
           ...prevState,
-          formSignup: {
+          formLogin: {
             email: "",
             password: "",
           },
