@@ -9,6 +9,7 @@ import TripDetails from "./components/trips/TripDetails";
 import Signup from "./components/Authentication/Signup";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Authentication/Login";
+import UpdateTrip from "./components/trips/UpdateTrip";
 
 function App() {
   return (
@@ -20,7 +21,12 @@ function App() {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/trips" component={TripList} />
-        <Route path="/tripdetails/:tripId" component={TripDetails} />
+        <Route exact path="/trips/:tripId" component={TripDetails} />
+        <Route
+          exact
+          path="/tripdetails/:tripId/update"
+          component={UpdateTrip}
+        />
       </Switch>
     </div>
   );
