@@ -41,7 +41,7 @@ class TripDetails extends Component {
           <UpdateTrip theTrip={this.state} {...this.props} />
         ) : (
           <section>
-            <p> This is details page! </p>
+            <h1> Trip Details! </h1>
             <h2> {tripName} </h2>
             <h3>Type: {tripType}</h3>
             <h4>Location: {location}</h4>
@@ -56,7 +56,7 @@ class TripDetails extends Component {
 
             {/* {this.showEditForm()} */}
             <button onClick={() => this.showEditForm()}>Edit Trip</button>
-            <button onClick={() => this.deletePhone(_id)}>Delete Trip</button>
+            {/* <button onClick={() => this.deleteTrip()}>Delete Trip</button> */}
           </section>
         )}
 

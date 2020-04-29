@@ -47,7 +47,7 @@ class TripList extends Component {
         return (
           <div key={i}>
             <h2>
-              <Link to={`/tripdetails/${trip._id}`}>{trip.tripName}</Link>
+              <Link to={`/trips/${trip._id}`}>{trip.tripName}</Link>
             </h2>
             {/* <h2>{trip.tripName}</h2> */}
             <h3>Type: {trip.tripType}</h3>
