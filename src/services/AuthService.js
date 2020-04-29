@@ -26,7 +26,8 @@ const AUTH_SERVICE = {
   },
 
   getUser() {
-    return service.get("/api/isLoggedIn");
+    console.log("---- SOMEONE IS LOGGED IN -----");
+    return service.get("/api/isLoggedIn", {});
   },
 };
 
