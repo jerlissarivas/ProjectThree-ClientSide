@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TripList from "./trips/TripList";
 import { Route, Switch, Link } from "react-router-dom";
 import AddTrip from "./trips/AddTrip";
+import OutlinedCard from "./trips/OutlinedCard";
 
 class Home extends Component {
   render() {
@@ -11,6 +12,7 @@ class Home extends Component {
         <AddTrip />
         <hr />
         <Link to="/trips">View Your Trips</Link>
+        <OutlinedCard />
       </div>
     );
   }
