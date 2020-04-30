@@ -24,24 +24,20 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard() {
+export default function OutlinedCard() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
-    <Card className={classes.root}>
-      <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
+    <>
+      <Card className={classes.root} variant="outlined">
+        <CardContent>
           <TripList />
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">View Your Itinerary</Button>
-      </CardActions>
-    </Card>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Learn More</Button>
+        </CardActions>
+      </Card>
+    </>
   );
 }
