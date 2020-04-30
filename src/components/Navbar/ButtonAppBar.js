@@ -8,6 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import "typeface-roboto";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,25 +26,45 @@ export default function ButtonAppBar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h3" className={classes.title}>
-            Trip Planner
-          </Typography>
-          <Link to="/Login">
-            <Button variant="outlined">Login</Button>
-          </Link>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AuthContext.Consumer>
+      {(context) => (
+        <div className={classes.root}>
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+              >
+                {/* <MenuIcon /> */}
+              </IconButton>
+              <Typography variant="h3" className={classes.title}>
+                Trip Planner
+              </Typography>
+              {context.state.isLoggedIn ? (
+                <>
+                  <Link to="/home">
+                    <Button variant="outlined">Home</Button>
+                  </Link>
+                  <Link to="/Logout">
+                    <Button variant="outlined">Log Out</Button>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/Login">
+                    <Button variant="outlined">Login</Button>
+                  </Link>
+                  <Link to="/Signup">
+                    <Button variant="outlined">Sign Up</Button>
+                  </Link>
+                </>
+              )}
+            </Toolbar>
+          </AppBar>
+        </div>
+      )}
+    </AuthContext.Consumer>
   );
 }
