@@ -46,7 +46,7 @@ class AddTrip extends Component {
             value={this.state.tripName}
             onChange={this.handleChange}
           />
-
+          <br />
           <label>Trip Type:</label>
           <input
             type="text"
@@ -54,7 +54,7 @@ class AddTrip extends Component {
             value={this.state.tripType}
             onChange={this.handleChange}
           />
-
+          <br />
           <label>Location:</label>
           <input
             type="text"
@@ -62,7 +62,7 @@ class AddTrip extends Component {
             value={this.state.location}
             onChange={this.handleChange}
           />
-
+          <br />
           <label>Dates:</label>
           <input
             type="text"
@@ -70,7 +70,7 @@ class AddTrip extends Component {
             value={this.state.dates}
             onChange={this.handleChange}
           />
-
+          <br />
           <label>Travel Type:</label>
           <input
             type="text"
@@ -78,7 +78,7 @@ class AddTrip extends Component {
             value={this.state.travelType}
             onChange={this.handleChange}
           />
-
+          <br />
           <input type="submit" value="Add Trip" />
         </form>
       </div>
