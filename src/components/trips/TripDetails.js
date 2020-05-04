@@ -48,6 +48,8 @@ class TripDetails extends Component {
             <h4>Dates: {dates}</h4>
             <h4>Travel Type: {travelType}</h4>
 
+            {/* Add Options to Travel Type */}
+
             {/* <ul>
               {specs.map((oneSpec, index) => {
                 return <li key={index}> {oneSpec} </li>;
