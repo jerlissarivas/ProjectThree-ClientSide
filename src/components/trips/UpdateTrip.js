@@ -11,6 +11,7 @@ class UpdateTrip extends Component {
       location,
       dates,
       travelType,
+      notes,
     } = this.props.theTrip;
     this.state = {
       tripName,
@@ -18,6 +19,7 @@ class UpdateTrip extends Component {
       location,
       dates,
       travelType,
+      notes,
     };
   }
 
@@ -53,7 +55,14 @@ class UpdateTrip extends Component {
   render() {
     // console.log('0 000 0 0 0 00 0 ',this.props);
     // console.log(" = = = == =", this.state);
-    const { tripName, tripType, location, dates, travelType } = this.state;
+    const {
+      tripName,
+      tripType,
+      location,
+      dates,
+      travelType,
+      notes,
+    } = this.state;
     return (
       <section>
         <h2>Edit: {tripName} </h2>
@@ -89,6 +98,14 @@ class UpdateTrip extends Component {
             onChange={(event) => this.genericSync(event)}
             type="text"
             name="travelType"
+          />
+
+          <label> Notes: </label>
+          <input
+            value={notes}
+            onChange={(event) => this.genericSync(event)}
+            type="text"
+            name="notes"
           />
 
           <button> Save </button>
