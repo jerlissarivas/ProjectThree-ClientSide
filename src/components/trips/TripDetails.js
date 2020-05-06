@@ -62,6 +62,7 @@ class TripDetails extends Component {
           </section>
         )}
 
+        <br />
         <Link to={"/trips"}>View Your Trips</Link>
       </section>
     );

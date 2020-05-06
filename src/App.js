@@ -10,6 +10,8 @@ import Signup from "./components/Authentication/Signup";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Authentication/Login";
 import UpdateTrip from "./components/trips/UpdateTrip";
+import AddFutureTrips from "./components/FutureTrips/AddFutureTrips";
+import FutureTripsList from "./components/FutureTrips/FutureTripsList";
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/trips" component={TripList} />
         <Route exact path="/trips/:tripId" component={TripDetails} />
+        <Route exact path="/futuretrips" component={FutureTripsList} />
         <Route
           exact
           path="/tripdetails/:tripId/update"
