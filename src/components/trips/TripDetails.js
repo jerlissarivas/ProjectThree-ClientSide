@@ -34,7 +34,15 @@ class TripDetails extends Component {
 
   render() {
     // console.log('state: ', this.state);
-    const { _id, tripName, tripType, location, dates, travelType } = this.state;
+    const {
+      _id,
+      tripName,
+      tripType,
+      location,
+      dates,
+      travelType,
+      notes,
+    } = this.state;
     return (
       <section>
         {this.state.showEdit ? (
@@ -47,6 +55,7 @@ class TripDetails extends Component {
             <h4>Location: {location}</h4>
             <h4>Dates: {dates}</h4>
             <h4>Travel Type: {travelType}</h4>
+            <h4>Notes: {notes}</h4>
 
             {/* Add Options to Travel Type */}
 
