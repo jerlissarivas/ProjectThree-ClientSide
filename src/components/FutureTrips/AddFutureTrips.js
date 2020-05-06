@@ -14,6 +14,7 @@ class AddFutureTrips extends Component {
     axios
       .post("http://localhost:3001/futuretrips", this.state)
       .then((newlyCreatedFutureTripsFromAPI) => {
+        console.log(newlyCreatedFutureTripsFromAPI);
         console.log({ newlyCreatedFutureTripsFromAPI });
 
         this.props.updateState();
@@ -46,7 +47,7 @@ class AddFutureTrips extends Component {
           <label>Dates:</label>
           <input
             type="text"
-            name="dates"
+            name="expectedDate"
             value={this.state.expectedDate}
             onChange={this.handleChange}
           />
