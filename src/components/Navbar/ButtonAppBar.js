@@ -47,6 +47,12 @@ export default function ButtonAppBar() {
                   <Link to="/home">
                     <Button variant="outlined">Home</Button>
                   </Link>
+                  <Link to="/trips">
+                    <Button variant="outlined">View Trips</Button>
+                  </Link>
+                  <Link to="/futuretrips">
+                    <Button variant="outlined">View Future Trips</Button>
+                  </Link>
                   <Link to="/Logout">
                     <Button variant="outlined">Log Out</Button>
                   </Link>
