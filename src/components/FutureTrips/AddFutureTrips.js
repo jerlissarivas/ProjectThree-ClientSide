@@ -12,7 +12,7 @@ class AddFutureTrips extends Component {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3001/futuretrips", this.state)
+      .post(process.env.REACT_APP_SERVER_POINT+"futuretrips", this.state)
       .then((newlyCreatedFutureTripsFromAPI) => {
         console.log(newlyCreatedFutureTripsFromAPI);
         console.log({ newlyCreatedFutureTripsFromAPI });

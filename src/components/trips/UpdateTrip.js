@@ -38,7 +38,7 @@ class UpdateTrip extends Component {
     axios
       .post(
         process.env.REACT_APP_SERVER_POINT +
-          `/trips/${this.props.theTrip._id}/update`,
+          `trips/${this.props.theTrip._id}/update`,
         this.state,
         { withCredentials: true } // FORCE axios to send cookies across domains
       )

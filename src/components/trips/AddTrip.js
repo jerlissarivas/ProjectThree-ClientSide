@@ -14,7 +14,7 @@ class AddTrip extends Component {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3001/trips", this.state)
+      .post(process.env.REACT_APP_SERVER_POINT + "trips", this.state)
       .then((newlyCreatedTripFromAPI) => {
         console.log({ newlyCreatedTripFromAPI });
 
@@ -26,6 +26,7 @@ class AddTrip extends Component {
           dates: "",
           travelType: "",
         });
+        this.props.history.push("/trips");
       })
       .catch((err) => console.log({ err }));
   };

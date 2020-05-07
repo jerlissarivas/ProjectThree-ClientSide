@@ -20,7 +20,10 @@ class TripDetails extends Component {
     const { params } = this.props.match;
 
     axios
-      .get(`http://localhost:3001/trips/${params.tripId}`, this.state)
+      .get(
+        process.env.REACT_APP_SERVER_POINT + `trips/${params.tripId}`,
+        this.state
+      )
       .then((responseFromApi) => {
         console.log("this is res: ", responseFromApi);
         this.setState(responseFromApi.data);

@@ -28,7 +28,7 @@ class UpdateFutureTrips extends Component {
     axios
       .post(
         process.env.REACT_APP_SERVER_POINT +
-          `/futuretrips/${this.props.theFutureTrips._id}/update`,
+          `futuretrips/${this.props.theFutureTrips._id}/update`,
         this.state,
         { withCredentials: true } // FORCE axios to send cookies across domains
       )

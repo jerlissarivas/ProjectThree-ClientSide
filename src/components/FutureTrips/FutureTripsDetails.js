@@ -20,7 +20,7 @@ class FutureTripsDetails extends Component {
 
     axios
       .get(
-        `http://localhost:3001/futuretrips/${params.futureTripsId}`,
+        process.env.REACT_APP_SERVER_POINT+`futuretrips/${params.futureTripsId}`,
         this.state
       )
       .then((responseFromApi) => {

@@ -11,7 +11,7 @@ class AddTravel extends Component {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3001/travel", this.state)
+      .post(process.env.REACT_APP_SERVER_POINT + "travel", this.state)
       .then((newlyCreatedTravelFromAPI) => {
         console.log({ newlyCreatedTravelFromAPI });
 
