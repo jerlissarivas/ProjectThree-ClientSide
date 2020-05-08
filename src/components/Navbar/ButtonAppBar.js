@@ -53,9 +53,7 @@ export default function ButtonAppBar() {
                   <Link to="/futuretrips">
                     <Button variant="outlined">View Future Trips</Button>
                   </Link>
-                  <Link to="/Logout">
-                    <Button variant="outlined">Log Out</Button>
-                  </Link>
+                    <Button variant="outlined" onClick={context.handleLogout}>Log Out</Button>
                 </>
               ) : (
                 <>
