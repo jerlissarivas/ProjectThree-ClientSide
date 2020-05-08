@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <div>
         <h1>Plan your next trip!</h1>
-        <AddTrip />
+        <AddTrip {...this.props} />
         <hr />
         <AddFutureTrips />
         <Link to="/futuretrips">View Your Future Trips</Link>
