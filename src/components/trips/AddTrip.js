@@ -18,25 +18,26 @@ class AddTrip extends Component {
       .then((newlyCreatedTripFromAPI) => {
         console.log({ newlyCreatedTripFromAPI });
 
-        this.props.updateState();
+        // this.props.updateState();
         this.setState({
           tripName: "",
           tripType: "",
           location: "",
           dates: "",
           travelType: "",
-        });
-        this.props.history.push("/trips");
+        }, this.props.history.push("/trips"));
+        // this.props.history.push("/trips");
       })
       .catch((err) => console.log({ err }));
-  };
-
-  handleChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  };
-
-  render() {
+    };
+    
+    handleChange = (event) => {
+      const { name, value } = event.target;
+      this.setState({ [name]: value });
+    };
+    
+    render() {
+      console.log(this.props)
     return (
       <div>
         <form onSubmit={this.submit}>
