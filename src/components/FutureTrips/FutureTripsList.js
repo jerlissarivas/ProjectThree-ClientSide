@@ -23,7 +23,7 @@ class FutureTripsList extends Component {
     axios
       .post(process.env.REACT_APP_SERVER_POINT+`futuretrips/${futureTripsId}/delete`)
       .then((messageAfterDeletingFutureTrips) => {
-        console.log({ messageAfterDeletingFutureTrips });
+        console.log({ futureTripsId, messageAfterDeletingFutureTrips });
         this.getFutureTripsList();
       })
       .catch((err) => console.log({ err }));
