@@ -9,7 +9,7 @@ function Login() {
       {(context) => {
         const {
           formLogin: { email, password },
-          message,
+          // message,
           isLoggedIn,
         } = context.state;
 
@@ -22,7 +22,7 @@ function Login() {
               <Redirect to="/home" />
             ) : (
               <>
-                <h2>Login form</h2>
+                <h4>LOG IN</h4>
                 <form onSubmit={handleLoginSubmit}>
                   <label htmlFor="email">
                     Email:
@@ -48,11 +48,10 @@ function Login() {
                     />
                     <br />
                   </label>
-                  <br />
                   <button>Login</button>
                 </form>
                 {/* {message ? <div>{message}</div> : ''} */}
-                {message && <div>{message}</div>}
+                {/* {message && <div>{message}</div>} */}
               </>
             )}
           </>
