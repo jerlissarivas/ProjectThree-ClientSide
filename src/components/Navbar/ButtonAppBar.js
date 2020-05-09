@@ -40,29 +40,31 @@ export default function ButtonAppBar() {
                 {/* <MenuIcon /> */}
               </IconButton>
               <Typography variant="h3" className={classes.title}>
-                Trip Up 
+                t r i p U P
               </Typography>
               {context.state.isLoggedIn ? (
                 <>
                   <Link to="/home">
                     <Button variant="outlined">Home</Button>
                   </Link>
-                  <Link to="/trips">
+                  {/* <Link to="/trips">
                     <Button variant="outlined">View Trips</Button>
                   </Link>
                   <Link to="/futuretrips">
                     <Button variant="outlined">View Future Trips</Button>
-                  </Link>
-                    <Button variant="outlined" onClick={context.handleLogout}>Log Out</Button>
+                  </Link> */}
+                  <Button variant="outlined" onClick={context.handleLogout}>
+                    Log Out
+                  </Button>
                 </>
               ) : (
                 <>
-                  <Link to="/Login">
+                  {/* <Link to="/Login">
                     <Button variant="outlined">Login</Button>
                   </Link>
                   <Link to="/Signup">
                     <Button variant="outlined">Sign Up</Button>
-                  </Link>
+                  </Link> */}
                 </>
               )}
             </Toolbar>

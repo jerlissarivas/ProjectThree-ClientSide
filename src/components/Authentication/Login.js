@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Auth.css";
 import { Redirect } from "react-router-dom";
 import { AuthContext } from "../../context/index";
 
@@ -26,6 +26,7 @@ function Login() {
                 <form onSubmit={handleLoginSubmit}>
                   <label htmlFor="email">
                     Email:
+                    <br />
                     <input
                       id="email"
                       name="email"
@@ -33,9 +34,11 @@ function Login() {
                       value={email}
                       onChange={handleLoginInput}
                     />
+                    <br />
                   </label>
                   <label htmlFor="password">
                     Password:
+                    <br />
                     <input
                       id="password"
                       name="password"
@@ -43,7 +46,9 @@ function Login() {
                       value={password}
                       onChange={handleLoginInput}
                     />
+                    <br />
                   </label>
+                  <br />
                   <button>Login</button>
                 </form>
                 {/* {message ? <div>{message}</div> : ''} */}

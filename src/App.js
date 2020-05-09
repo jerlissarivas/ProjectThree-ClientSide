@@ -1,7 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Home from "./components/Home/Home";
 import TripList from "./components/trips/TripList";
 import ButtonAppBar from "./components/Navbar/ButtonAppBar";
@@ -12,6 +17,7 @@ import Login from "./components/Authentication/Login";
 import UpdateTrip from "./components/trips/UpdateTrip";
 import AddFutureTrips from "./components/FutureTrips/AddFutureTrips";
 import FutureTripsList from "./components/FutureTrips/FutureTripsList";
+import { AuthContext } from "./context/index";
 
 function App() {
   return (

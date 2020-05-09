@@ -21,7 +21,10 @@ class FutureTripsList extends Component {
   // after we delete the trip from the db we will need to then call the function which gets all the trips from the db in order to update the list with the deleted trip missing.
   deleteFutureTrips = (futureTripsId) => {
     axios
-      .post(process.env.REACT_APP_SERVER_POINT+`futuretrips/${futureTripsId}/delete`)
+      .post(
+        process.env.REACT_APP_SERVER_POINT +
+          `futuretrips/${futureTripsId}/delete`
+      )
       .then((messageAfterDeletingFutureTrips) => {
         console.log({ futureTripsId, messageAfterDeletingFutureTrips });
         this.getFutureTripsList();
@@ -32,7 +35,7 @@ class FutureTripsList extends Component {
   // this function will be used in order to get the full list of FutureTrips as well as update the state whenever we make a change like adding or deleting a FutureTrips.
   getFutureTripsList = () => {
     axios
-      .get(process.env.REACT_APP_SERVER_POINT+"futuretrips")
+      .get(process.env.REACT_APP_SERVER_POINT + "futuretrips")
       .then((futureTripsListFromAPI) => {
         this.setState({ futureTripsList: futureTripsListFromAPI.data });
       })
@@ -64,6 +67,8 @@ class FutureTripsList extends Component {
         {/* <AddTrip updateState={this.newTripAdded} /> */}
         <hr />
         {this.state.futureTripsList && this.showFutureTrips()}
+        <hr />
+        <AddFutureTrips />
       </div>
     );
   }
