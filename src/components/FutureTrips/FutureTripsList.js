@@ -68,7 +68,7 @@ class FutureTripsList extends Component {
         <hr />
         {this.state.futureTripsList && this.showFutureTrips()}
         <hr />
-        <AddFutureTrips />
+        <AddFutureTrips {...this.props}/>
       </div>
     );
   }

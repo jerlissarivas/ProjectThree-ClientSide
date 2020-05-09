@@ -12,17 +12,20 @@ class AddFutureTrips extends Component {
     event.preventDefault();
 
     axios
-      .post(process.env.REACT_APP_SERVER_POINT+"futuretrips", this.state)
+      .post(process.env.REACT_APP_SERVER_POINT + "futuretrips", this.state)
       .then((newlyCreatedFutureTripsFromAPI) => {
         console.log(newlyCreatedFutureTripsFromAPI);
         console.log({ newlyCreatedFutureTripsFromAPI });
 
-        this.props.updateState();
-        this.setState({
-          expectedDate: "",
-          eventLocation: "",
-          notes: "",
-        });
+        // this.props.updateState();
+        this.setState(
+          {
+            expectedDate: "",
+            eventLocation: "",
+            notes: "",
+          },
+          this.props.history.push("/futuretrips")
+        );
       })
       .catch((err) => console.log({ err }));
   };
@@ -37,7 +40,7 @@ class AddFutureTrips extends Component {
       <div>
         <form onSubmit={this.submit}>
           <label>Location:</label>
-          <br/>
+          <br />
           <input
             type="text"
             name="eventLocation"
@@ -46,7 +49,7 @@ class AddFutureTrips extends Component {
           />
           <br />
           <label>Dates:</label>
-          <br/>
+          <br />
           <input
             type="text"
             name="expectedDate"
