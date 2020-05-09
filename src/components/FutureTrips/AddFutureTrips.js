@@ -37,6 +37,7 @@ class AddFutureTrips extends Component {
       <div>
         <form onSubmit={this.submit}>
           <label>Location:</label>
+          <br/>
           <input
             type="text"
             name="eventLocation"
@@ -45,6 +46,7 @@ class AddFutureTrips extends Component {
           />
           <br />
           <label>Dates:</label>
+          <br/>
           <input
             type="text"
             name="expectedDate"

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./Trips.css";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 
 class AddTrip extends Component {
   state = {
@@ -19,29 +22,33 @@ class AddTrip extends Component {
         console.log({ newlyCreatedTripFromAPI });
 
         // this.props.updateState();
-        this.setState({
-          tripName: "",
-          tripType: "",
-          location: "",
-          dates: "",
-          travelType: "",
-        }, this.props.history.push("/trips"));
+        this.setState(
+          {
+            tripName: "",
+            tripType: "",
+            location: "",
+            dates: "",
+            travelType: "",
+          },
+          this.props.history.push("/trips")
+        );
         // this.props.history.push("/trips");
       })
       .catch((err) => console.log({ err }));
-    };
-    
-    handleChange = (event) => {
-      const { name, value } = event.target;
-      this.setState({ [name]: value });
-    };
-    
-    render() {
-      console.log(this.props)
+  };
+
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+
+  render() {
+    console.log(this.props);
     return (
       <div>
         <form onSubmit={this.submit}>
           <label>Trip Name:</label>
+          <br />
           <input
             type="text"
             name="tripName"
@@ -50,6 +57,7 @@ class AddTrip extends Component {
           />
           <br />
           <label>Trip Type:</label>
+          <br />
           <input
             type="text"
             name="tripType"
@@ -58,6 +66,7 @@ class AddTrip extends Component {
           />
           <br />
           <label>Location:</label>
+          <br />
           <input
             type="text"
             name="location"
@@ -66,6 +75,7 @@ class AddTrip extends Component {
           />
           <br />
           <label>Dates:</label>
+          <br />
           <input
             type="text"
             name="dates"
@@ -74,6 +84,7 @@ class AddTrip extends Component {
           />
           <br />
           <label>Travel Type:</label>
+          <br />
           <input
             type="text"
             name="travelType"
@@ -81,7 +92,7 @@ class AddTrip extends Component {
             onChange={this.handleChange}
           />
           <br />
-          <input type="submit" value="Add Trip" />
+          <input type="submit" value="Plan Trip" />
         </form>
       </div>
     );

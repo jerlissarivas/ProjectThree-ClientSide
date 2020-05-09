@@ -40,7 +40,7 @@ export default function ButtonAppBar() {
                 {/* <MenuIcon /> */}
               </IconButton>
               <Typography variant="h3" className={classes.title}>
-                Trip Planner
+                Trip Up 
               </Typography>
               {context.state.isLoggedIn ? (
                 <>
