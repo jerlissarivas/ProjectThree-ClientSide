@@ -12,7 +12,7 @@ class Home extends Component {
         <h1>Plan your next trip!</h1>
         <AddTrip {...this.props} />
         <hr />
-        <Link className="newbutton" to="/trips">
+        <Link className="newbutton-two" to="/trips">
           PLANNED TRIPS
         </Link>
         <Link className="newbutton" to="/futuretrips">

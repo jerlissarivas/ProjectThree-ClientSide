@@ -8,7 +8,7 @@
   cursor: pointer;
   color:#000000;
   /* font-family:Arial; */
-  font-size: 15px;
+  font-size: 25px;
   font-weight:bold;
   /* padding:6px 24px; */
   padding: 90px;
@@ -26,6 +26,38 @@
   background-color: #f6f6f6;
 }
 .newbutton:active {
+  position: relative;
+  top: 1px;
+}
+
+.newbutton-two {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color:#000000;
+  /* font-family:Arial; */
+  font-size: 25px;
+  font-weight:bold;
+  /* padding:6px 24px; */
+  padding: 90px;
+  margin: 20px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  background-image: url("../../Assets/airport.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+}
+.newbutton-two:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+.newbutton-two:active {
   position: relative;
   top: 1px;
 }
