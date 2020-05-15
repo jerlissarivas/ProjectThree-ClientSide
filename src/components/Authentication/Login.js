@@ -9,7 +9,7 @@ function Login() {
       {(context) => {
         const {
           formLogin: { email, password },
-          // message,
+
           isLoggedIn,
         } = context.state;
 
