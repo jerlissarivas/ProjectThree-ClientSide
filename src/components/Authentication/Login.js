@@ -50,8 +50,6 @@ function Login() {
                   </label>
                   <button>Login</button>
                 </form>
-                {/* {message ? <div>{message}</div> : ''} */}
-                {/* {message && <div>{message}</div>} */}
               </>
             )}
           </>
