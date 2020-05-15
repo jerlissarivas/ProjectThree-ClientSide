@@ -6,10 +6,10 @@
   border: 1px solid #dcdcdc;
   display: inline-block;
   cursor: pointer;
-  color:#000000;
+  color: #000000;
   /* font-family:Arial; */
   font-size: 25px;
-  font-weight:bold;
+  font-weight: bold;
   /* padding:6px 24px; */
   padding: 90px;
   margin: 20px;
@@ -38,16 +38,16 @@
   border: 1px solid #dcdcdc;
   display: inline-block;
   cursor: pointer;
-  color:#000000;
+  color: #000000;
   /* font-family:Arial; */
   font-size: 25px;
-  font-weight:bold;
+  font-weight: bold;
   /* padding:6px 24px; */
   padding: 90px;
   margin: 20px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
-  background-image: url("../../Assets/airport.jpg");
+  background-image: url("../../Assets/element5-digital-uE2T1tCFsn8-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
