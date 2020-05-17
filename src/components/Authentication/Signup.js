@@ -1,5 +1,5 @@
 import React from "react";
-import "./Auth.css"
+import "./Auth.css";
 import { Redirect } from "react-router-dom";
 import { AuthContext } from "../../context/index";
 
@@ -23,7 +23,7 @@ function Signup() {
                 <form onSubmit={handleSignupSubmit}>
                   <label htmlFor="username">
                     Username:
-                    <br/>
+                    <br />
                     <input
                       id="username"
                       name="username"
@@ -31,11 +31,11 @@ function Signup() {
                       value={username}
                       onChange={handleSignupInput}
                     />
-                    <br/>
+                    <br />
                   </label>
                   <label htmlFor="email">
                     Email:
-                    <br/>
+                    <br />
                     <input
                       id="email"
                       name="email"
@@ -43,11 +43,11 @@ function Signup() {
                       value={email}
                       onChange={handleSignupInput}
                     />
-                    <br/>
+                    <br />
                   </label>
                   <label htmlFor="password">
                     Password:
-                    <br/>
+                    <br />
                     <input
                       id="password"
                       name="password"
@@ -55,11 +55,10 @@ function Signup() {
                       value={password}
                       onChange={handleSignupInput}
                     />
-                    <br/>
+                    <br />
                   </label>
                   <button>Signup</button>
                 </form>
-                {/* {message ? <div>{message}</div> : ''} */}
                 {message && <div>{message}</div>}
               </>
             )}
