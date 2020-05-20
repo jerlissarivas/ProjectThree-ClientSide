@@ -64,11 +64,10 @@ class FutureTripsList extends Component {
   render() {
     return (
       <div>
-        {/* <AddTrip updateState={this.newTripAdded} /> */}
         <hr />
         {this.state.futureTripsList && this.showFutureTrips()}
         <hr />
-        <AddFutureTrips {...this.props}/>
+        <AddFutureTrips {...this.props} />
       </div>
     );
   }
