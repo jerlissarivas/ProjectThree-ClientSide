@@ -50,7 +50,9 @@ class FutureTripsList extends Component {
         return (
           <div key={i}>
             <h2>
-              <Link to={`/futuretrips/${futureTrips._id}`}>{futureTrips.eventLocation}</Link>
+              <Link to={`/futuretrips/${futureTrips._id}`}>
+                {futureTrips.eventLocation}
+              </Link>
             </h2>
             {/* <h2>{futureTrips.eventLocation}</h2> */}
             <h3>Date: {futureTrips.expectedDate}</h3>
