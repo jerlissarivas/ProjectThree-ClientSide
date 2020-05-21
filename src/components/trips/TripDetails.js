@@ -52,8 +52,7 @@ class TripDetails extends Component {
           <UpdateTrip theTrip={this.state} {...this.props} />
         ) : (
           <section>
-            <h1> Trip Details! </h1>
-            <h2> {tripName} </h2>
+            <h2> Details for: {tripName} </h2>
             <h3>Type: {tripType}</h3>
             <h4>Location: {location}</h4>
             <h4>Dates: {dates}</h4>
