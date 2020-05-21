@@ -53,8 +53,6 @@ class UpdateTrip extends Component {
   }
 
   render() {
-    // console.log('0 000 0 0 0 00 0 ',this.props);
-    // console.log(" = = = == =", this.state);
     const {
       tripName,
       tripType,
