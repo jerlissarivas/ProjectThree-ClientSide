@@ -49,7 +49,10 @@ class FutureTripsList extends Component {
       this.state.futureTripsList.map((futureTrips, i) => {
         return (
           <div key={i}>
-            <h2>{futureTrips.eventLocation}</h2>
+            <h2>
+              <Link to={`/futuretrips/${futureTrips._id}`}>{futureTrips.eventLocation}</Link>
+            </h2>
+            {/* <h2>{futureTrips.eventLocation}</h2> */}
             <h3>Date: {futureTrips.expectedDate}</h3>
 
             <button onClick={() => this.deleteFutureTrips(futureTrips._id)}>
