@@ -20,7 +20,8 @@ class FutureTripsDetails extends Component {
 
     axios
       .get(
-        process.env.REACT_APP_SERVER_POINT+`futuretrips/${params.futureTripsId}`,
+        process.env.REACT_APP_SERVER_POINT +
+          `futuretrips/${params.futureTripsId}`,
         this.state
       )
       .then((responseFromApi) => {
@@ -43,8 +44,7 @@ class FutureTripsDetails extends Component {
           <UpdateFutureTrips theFutureTrips={this.state} {...this.props} />
         ) : (
           <section>
-            <h1> Future Trip Details! </h1>
-            <h2> {eventLocation} </h2>
+            <h2> Details for: {eventLocation} Trip</h2>
             <h3>Expected Date: {expectedDate}</h3>
             <h3>Notes: {notes}</h3>
 
