@@ -5,11 +5,11 @@ import { Redirect } from "react-router-dom";
 class UpdateFutureTrips extends Component {
   constructor(props) {
     super(props);
-    const { date, eventName, eventLocation } = this.props.theFutureTrips;
+    const { expectedDate, eventLocation, notes } = this.props.theFutureTrips;
     this.state = {
-      date,
-      eventName,
+      expectedDate,
       eventLocation,
+      notes,
     };
   }
 
@@ -43,20 +43,18 @@ class UpdateFutureTrips extends Component {
   }
 
   render() {
-    // console.log('0 000 0 0 0 00 0 ',this.props);
-    // console.log(" = = = == =", this.state);
-    const { date, eventName, eventLocation } = this.state;
+    const { expectedDate, eventLocation, notes } = this.state;
     return (
       <section>
-        <h2>Edit: {eventName} </h2>
+        <h2>Edit: {eventLocation} Trip</h2>
 
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <label> Date: </label>
           <input
-            value={date}
+            value={expectedDate}
             onChange={(event) => this.genericSync(event)}
             type="text"
-            name="date"
+            name="expectedDate"
           />
 
           <label> Event Location: </label>
@@ -65,6 +63,14 @@ class UpdateFutureTrips extends Component {
             onChange={(event) => this.genericSync(event)}
             type="text"
             name="eventLocation"
+          />
+
+          <label> Notes: </label>
+          <input
+            value={notes}
+            onChange={(event) => this.genericSync(event)}
+            type="text"
+            name="notes"
           />
 
           <button> Save </button>
