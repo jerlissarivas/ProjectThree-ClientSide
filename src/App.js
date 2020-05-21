@@ -17,6 +17,7 @@ import Login from "./components/Authentication/Login";
 import UpdateTrip from "./components/trips/UpdateTrip";
 import AddFutureTrips from "./components/FutureTrips/AddFutureTrips";
 import FutureTripsList from "./components/FutureTrips/FutureTripsList";
+import FutureTripsDetails from "./components/FutureTrips/FutureTripsDetails";
 import { AuthContext } from "./context/index";
 
 function App() {
@@ -31,6 +32,11 @@ function App() {
         <Route exact path="/trips" component={TripList} />
         <Route exact path="/trips/:tripId" component={TripDetails} />
         <Route exact path="/futuretrips" component={FutureTripsList} />
+        <Route
+          exact
+          path="/futuretrips/:futureTripsId"
+          component={FutureTripsDetails}
+        />
         <Route
           exact
           path="/tripdetails/:tripId/update"
