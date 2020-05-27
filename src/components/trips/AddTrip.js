@@ -78,6 +78,7 @@ class AddTrip extends Component {
           <br />
           <input
             type="text"
+            //type="date"
             name="dates"
             value={this.state.dates}
             onChange={this.handleChange}
