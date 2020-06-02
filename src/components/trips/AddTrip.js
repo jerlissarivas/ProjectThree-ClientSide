@@ -21,7 +21,6 @@ class AddTrip extends Component {
       .then((newlyCreatedTripFromAPI) => {
         console.log({ newlyCreatedTripFromAPI });
 
-        // this.props.updateState();
         this.setState(
           {
             tripName: "",
