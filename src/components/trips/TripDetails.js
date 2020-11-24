@@ -36,7 +36,6 @@ class TripDetails extends Component {
   }
 
   render() {
-    // console.log('state: ', this.state);
     const {
       _id,
       tripName,
@@ -59,17 +58,8 @@ class TripDetails extends Component {
             <h4>Travel Type: {travelType}</h4>
             <h4>Notes: {notes}</h4>
 
-            {/* Add Options to Travel Type */}
-
-            {/* <ul>
-              {specs.map((oneSpec, index) => {
-                return <li key={index}> {oneSpec} </li>;
-              })}
-            </ul> */}
-
-            {/* {this.showEditForm()} */}
+            
             <button onClick={() => this.showEditForm()}>Edit Trip</button>
-            {/* <button onClick={() => this.deleteTrip()}>Delete Trip</button> */}
           </section>
         )}
 
